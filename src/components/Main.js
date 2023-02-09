@@ -40,7 +40,7 @@ class Main extends Component {
                 Balance: {window.web3.utils.fromWei(this.props.tetherBalance)}{" "}
                 USDT
               </span>
-              <div className="input-group mb-4">
+              <div className="input-group mb-4 ml-3">
                 <input
                 ref={(input) => {this.input = input}}
                 type="text" placeholder="0" required />

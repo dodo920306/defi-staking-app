@@ -5,7 +5,7 @@ class Airdrop extends Component {
         super();
         this.state = {
         time: {},
-        seconds: 20,
+        seconds: 1200,
         };
         this.timer = 0;
         this.startTimer = this.startTimer.bind(this);
@@ -34,11 +34,11 @@ class Airdrop extends Component {
     secondsToTime(secs) {
         let hours = Math.floor(secs / 3600),
             minutes = Math.floor((secs % 3600) / 60),
-            seconds = secs % 216000,
+            seconds = secs % 3600 % 60,
             obj = {
                 'h': hours,
                 'm': minutes,
-                's': seconds
+                's': ("0" + seconds.toString()).slice(-2)
             };
         return obj;
     }
